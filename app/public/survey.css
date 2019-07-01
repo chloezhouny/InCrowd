@@ -12,13 +12,11 @@ body
 	position: relative;
 }
 
-
 #left h1
 {
 	color: #33FFB5;
 	font-size: 20px;
 	letter-spacing: 0.3em;
-	padding-top: 20px;
 	padding-left: 10px;
 
 }
@@ -27,7 +25,7 @@ body
 {
 	position: absolute;
 	top: 10%;
-	left: 10%;
+	left: 5%;
 	background-color: rgb(33,50,70,0.5);
 	width: 28%;
 }
@@ -35,7 +33,41 @@ body
 #right
 {
 	position: absolute;
-	top: 10%;
+	top: 30%;
 	left: 50%;
 	width: 28%;
+}
+
+
+.input-field label {
+     color: #33FFB5;
+   }
+
+
+ .input-field input[type=text]:focus + label {
+     color: #ec407a;
+   }
+
+   .input-field input[type=text]:focus {
+     border-bottom: 1px solid #ec407a;
+     box-shadow: 0 1px 0 0 #ec407a;
+   }
+
+#albums
+{
+  width: 35%;
+  position: absolute;
+  top: 15%;
+  left: 53%;
+}
+
+
+.card
+{
+  background-color: transparent;
+}
+
+.uk-card-default
+{
+  background: transparent;
 }
