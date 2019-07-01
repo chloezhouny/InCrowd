@@ -1,0 +1,41 @@
+html
+{
+	min-height:100vh;
+}
+
+
+body
+{
+	background-image: url(images/bg4.jpg);
+	background-size: 100% 110%;
+	min-height: 100vh;
+	position: relative;
+}
+
+
+#left h1
+{
+	color: #33FFB5;
+	font-size: 20px;
+	letter-spacing: 0.3em;
+	padding-top: 20px;
+	padding-left: 10px;
+
+}
+
+#left
+{
+	position: absolute;
+	top: 10%;
+	left: 10%;
+	background-color: rgb(33,50,70,0.5);
+	width: 28%;
+}
+
+#right
+{
+	position: absolute;
+	top: 10%;
+	left: 50%;
+	width: 28%;
+}

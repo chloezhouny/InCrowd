@@ -1,0 +1,38 @@
+html
+{
+	min-height:100vh;
+}
+
+
+body
+{
+	background-image: url(images/bg2.jpg);
+	background-size: cover;
+	min-height: 100vh;
+	position: relative;
+}
+
+
+h1
+{
+	/*color: #33FFB5;*/
+	color: white;
+	letter-spacing: 0.5em;
+	font-weight: 800;
+	font-size: 40px;
+}
+
+h4, a
+{
+	color: white;
+	font-size: 15px;
+}
+
+#header
+{ 
+	position: absolute;
+	top: 35%;
+	margin: 0 auto;
+	left: 10%;
+}
+
