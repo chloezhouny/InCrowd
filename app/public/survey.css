@@ -14,10 +14,12 @@ body
 
 #left h1
 {
-	color: #33FFB5;
-	font-size: 20px;
+/*	color: #33FFB5;*/
+	color: #4AE5AD;
+	font-size: 40px;
 	letter-spacing: 0.3em;
 	padding-left: 10px;
+	font-weight: bold;
 
 }
 
@@ -26,8 +28,34 @@ body
 	position: absolute;
 	top: 10%;
 	left: 5%;
-	background-color: rgb(33,50,70,0.5);
 	width: 28%;
+}
+
+
+#submitSection
+{
+	margin-bottom: 0;
+}
+
+
+footer a
+{
+	color: #4AE5AD;
+	margin-right: 2%;
+}
+
+footer a:visited {
+  color: #4AE5AD;
+}
+
+
+footer a:hover {
+  color: pink;
+}
+
+/* selected link */
+footer a:active {
+  color: pink;
 }
 
 #right
@@ -39,18 +67,19 @@ body
 }
 
 
+
 .input-field label {
-     color: #33FFB5;
+     color: gray;
    }
 
 
  .input-field input[type=text]:focus + label {
-     color: #ec407a;
+     color: black;
    }
 
    .input-field input[type=text]:focus {
-     border-bottom: 1px solid #ec407a;
-     box-shadow: 0 1px 0 0 #ec407a;
+     border-bottom: 1px solid black;
+     box-shadow: 0 1px 0 0 black;
    }
 
 
@@ -95,7 +124,7 @@ body
 
 #sliders img
 {
-	width: 13%;
+	width: 15%;
 }
 
 
