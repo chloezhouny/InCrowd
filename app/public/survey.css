@@ -37,24 +37,31 @@ body
 	margin-bottom: 0;
 }
 
-
-footer a
+#header
 {
-	color: #4AE5AD;
+	position: absolute;
+	left: 80%;
+	top: 5%;
+}
+#header a
+{
+	color: black;
 	margin-right: 2%;
 }
 
-footer a:visited {
-  color: #4AE5AD;
+#header a:visited {
+  color: #header;
 }
 
 
-footer a:hover {
+#header a:hover {
   color: pink;
+  text-decoration: underline;
+
 }
 
 /* selected link */
-footer a:active {
+#header a:active {
   color: pink;
 }
 
