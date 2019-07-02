@@ -210,7 +210,7 @@
             </li>
         </ul>
 
-        <a class="uk-position-bottom-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous" ></a>
+        <a class="uk-position-bottom-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
         <a class="uk-position-bottom-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>
 
     </div>
@@ -226,16 +226,22 @@
   </p>
 </div>
 
+
 <div id="modal-media-youtube" class="uk-flex-top" uk-modal>
     <div class="uk-modal-dialog uk-width-auto uk-margin-auto-vertical">
+      <div class="uk-modal-header">
+      <h2 class="uk-modal-title" id = "matchedName"></h2>
+    </div>
         <button class="uk-modal-close-outside" type="button" uk-close></button>
         <iframe id = "youtubeIframe" width="1920" height="1080" frameborder="0" uk-video></iframe>
     </div>
 </div>
 
+
+
 <footer class="footer">
       <div class="container">
-        <p><a href="/api/survey">API Survey Link</a> | <a href="#">Github Repo</a>
+        <p><a href="/api/survey">API Survey Link</a> | <a href="https://github.com/chloezhouny/InCrowd">Github Repo</a>
       </div>
 </footer>
 
@@ -299,6 +305,8 @@ $("#submit").on("click", function(event) {
           
           var youtubeLink = "https://www.youtube-nocookie.com/embed/" + linkId[1];
           document.getElementById("youtubeIframe").setAttribute("src", youtubeLink);
+          document.getElementById("matchedName").innerHTML = name;
+
           console.log(document.getElementById("youtubeIframe").getAttribute("src"));
           });
     }
