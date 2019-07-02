@@ -293,11 +293,11 @@ $("#submit").on("click", function(event) {
         }).then(function(data) {
           console.log("WE GOT THIS FROM THE BACKEND", data.matchedUser);
           var name = data.matchedUser.name;
-          // var link = data.matchedUser.songLink;
-          // link = link.split("=");
-          // link = link[1];
-          var link = "zqv3YesdtRU";
-          var youtubeLink = "https://www.youtube-nocookie.com/embed/" + link;
+          var link = data.matchedUser.songLink;
+          var linkId = link.split("=");
+          console.log(linkId[1]);
+          
+          var youtubeLink = "https://www.youtube-nocookie.com/embed/" + linkId[1];
           document.getElementById("youtubeIframe").setAttribute("src", youtubeLink);
           console.log(document.getElementById("youtubeIframe").getAttribute("src"));
           });
