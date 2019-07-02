@@ -210,8 +210,12 @@
             </li>
         </ul>
 
-        <a class="uk-position-bottom-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
-        <a class="uk-position-bottom-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>
+        <div id = "sliders" >
+
+        <a  href="#"  uk-slider-item="previous" id = "sliderleft"><img src= "public/images/arrow-left.png"></a>
+        <a href="#"  uk-slider-item="next" id = "sliderright"><img src="public/images/arrow-right.png"></a>
+       </div>
+ 
 
     </div>
 
@@ -271,7 +275,7 @@ for (var i = 0; i < idNameArr.length; i++)
 
 
 $("#submit").on("click", function(event) {
-  if (!userAnswer.includes(undefined))
+  if ((!userAnswer.includes(undefined)) && ($("#name").val().trim() !== undefined) && ($("#songLink").val().trim() !== undefined))
   {
       var userInfo = 
       {

@@ -7,7 +7,7 @@ html
 body
 {
 	background-image: url(images/bg4.jpg);
-	background-size: 100% 110%;
+	background-size: auto 110%;
 	min-height: 100vh;
 	position: relative;
 }
@@ -53,12 +53,14 @@ body
      box-shadow: 0 1px 0 0 #ec407a;
    }
 
+
+
 #albums
 {
-  width: 35%;
+  width: 30%;
   position: absolute;
-  top: 15%;
-  left: 53%;
+  top: 20%;
+  left: 60%;
 }
 
 
@@ -66,4 +68,46 @@ body
 .uk-card-default
 {
   background: transparent;
+  box-shadow: none;
 }
+
+.uk-card-title
+{
+	font-size: 20px;
+	margin: 0;
+
+}
+
+.range-field
+{
+	margin: 0;
+}
+
+#sliders
+{
+	position: relative;
+	left: 12%;
+	bottom: 22%;
+	margin: 0;
+
+
+}
+
+#sliders img
+{
+	width: 13%;
+}
+
+
+#sliders #sliderleft
+{
+	margin-right: 45%;
+}
+
+
+
+.uk-card-primary.uk-card-body .uk-slidenav, .uk-card-primary>:not([class*=uk-card-media]) .uk-slidenav, .uk-card-secondary.uk-card-body .uk-slidenav, .uk-card-secondary>:not([class*=uk-card-media]) .uk-slidenav, .uk-light .uk-slidenav, .uk-offcanvas-bar .uk-slidenav, .uk-overlay-primary .uk-slidenav, .uk-section-primary:not(.uk-preserve-color) .uk-slidenav, .uk-section-secondary:not(.uk-preserve-color) .uk-slidenav, .uk-tile-primary:not(.uk-preserve-color) .uk-slidenav, .uk-tile-secondary:not(.uk-preserve-color) .uk-slidenav {
+    color: rgba(0,0,0,0);
+}
+
+
