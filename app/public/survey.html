@@ -248,7 +248,7 @@ for (var i = 0; i < idNameArr.length; i++)
   {
     var index = this.getAttribute("data-number");
     console.log(this.value);
-    userAnswer[index] = this.value;
+    userAnswer[index] = parseInt(this.value);
     console.log(userAnswer);
   }
 }
@@ -281,7 +281,9 @@ $("#submit").on("click", function(event) {
             $(name).val("");
           }
           
-        });
+        }).then(function(data) {
+          console.log("WE GOT THIS FROM THE BACKEND", data);
+          });
     }
 });
 
