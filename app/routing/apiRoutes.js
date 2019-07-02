@@ -29,8 +29,8 @@ module.exports = function(app) {
 
   app.post("/api/survey", function(req, res) {
       var newUser = req.body;
+      friendData.push(newUser);
       res.json(true);
-
   });
 
 };
