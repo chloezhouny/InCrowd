@@ -146,4 +146,9 @@ body
     color: rgba(0,0,0,0);
 }
 
+#nameSection
+{
+	padding-left: 2%;
+	padding-bottom: 2%;
+}
 
