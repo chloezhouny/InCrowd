@@ -6,12 +6,29 @@ html
 
 body
 {
-	background-image: url(images/bg2.jpg);
-	background-size: cover;
+	background-image: url(images/bg6.jpg);
+	background-size: 100% auto;
+	background-repeat: none;
+	min-height: 100vh;
+	position: relative;
+	
+}
+
+
+#bodyContainer
+{
+/*	background-color: rgb(255, 102, 102, 0.2);*/
+	background-color: rgb(0, 0, 102, 0.1)
 	min-height: 100vh;
 	position: relative;
 }
 
+
+
+#content
+{
+	margin-top: 17%;
+}
 
 h1
 {
@@ -19,31 +36,29 @@ h1
 	color: white;
 	letter-spacing: 0.5em;
 	font-weight: 800;
-	font-size: 50px;
+	font-size: 100px;
+	font-weight: 900px;
+	font-family: 'Archivo Black', sans-serif;
+	
 }
 
-h4, a
+a
 {
 	color: white;
-	font-size: 15px;
-}
-
-footer a
-{
-	margin-right: 2%;
+	font-size: 14px;
+	font-weight: bold;
+	
 }
 
 h4
-{/*
-	position: absolute;
-	left: 44%;
-	top: 90%*/
+{
+	color: white;
+	padding-bottom: 5%;
+	margin-top: 0;
+	font-size: 26px;
+	font-family: 'Open Sans', sans-serif;
 }
 
-#header
-{ 
-	padding-top: 24%;
-}
 
 #start
 {
@@ -51,8 +66,6 @@ h4
 	
 }
 
-footer
-{
-	margin-bottom: 10%;
-}
+
+
 

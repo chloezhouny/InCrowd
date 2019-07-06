@@ -7,42 +7,30 @@ html
 body
 {
 	background-image: url(images/bg4.jpg);
-	background-size: auto 110%;
+	background-size: cover;
 	min-height: 100vh;
 	position: relative;
 }
 
-#left h1
+
+
+
+
+
+#header h1
 {
 /*	color: #33FFB5;*/
 	color: #4AE5AD;
 	font-size: 40px;
 	letter-spacing: 0.3em;
-	padding-left: 10px;
 	font-weight: bold;
 
 }
 
-#left
-{
-	position: absolute;
-	top: 10%;
-	left: 5%;
-	width: 28%;
-}
 
 
-#submitSection
-{
-	margin-bottom: 0;
-}
 
-#header
-{
-	position: absolute;
-	left: 80%;
-	top: 5%;
-}
+
 #header a
 {
 	color: black;
@@ -65,38 +53,43 @@ body
   color: pink;
 }
 
-#right
+
+
+
+#left
 {
-	position: absolute;
-	top: 30%;
-	left: 50%;
-	width: 28%;
+	margin-top: 15%;
+}
+
+
+.uk-input, .uk-select, .uk-textarea 
+{
+	background-color: transparent;
+	transition: .3s ease-in-out;
+}
+
+.uk-input:focus
+{
+	background-color: transparent;
+	border-color: pink;
 }
 
 
 
-.input-field label {
-     color: gray;
-   }
 
 
- .input-field input[type=text]:focus + label {
-     color: black;
-   }
-
-   .input-field input[type=text]:focus {
-     border-bottom: 1px solid black;
-     box-shadow: 0 1px 0 0 black;
-   }
+#submitSection
+{
+	margin-bottom: 0;
+}
 
 
 
 #albums
 {
-  width: 30%;
-  position: absolute;
-  top: 20%;
-  left: 60%;
+  width: 40%;
+  margin-top: 5%;
+  z-index: 100;
 }
 
 
@@ -150,5 +143,96 @@ body
 {
 	padding-left: 2%;
 	padding-bottom: 2%;
+}
+
+
+
+
+
+
+.rating {
+    float:left;
+}
+
+/* :not(:checked) is a filter, so that browsers that don’t support :checked don’t 
+   follow these rules. Every browser that supports :checked also supports :not(), so
+   it doesn’t make the test unnecessarily selective */
+.rating:not(:checked) > input {
+    position:absolute;
+    top:-9999px;
+    clip:rect(0,0,0,0);
+}
+
+.rating:not(:checked) > label {
+    float:right;
+    width:1em;
+    padding:0 .1em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:200%;
+    line-height:1.2;
+    color:#ddd;
+    text-shadow:1px 1px #bbb, 2px 2px #666, .1em .1em .2em rgba(0,0,0,.5);
+}
+
+.rating:not(:checked) > label:before {
+    content: '★ ';
+}
+
+.rating > input:checked ~ label {
+    color: #f70;
+    text-shadow:1px 1px #c60, 2px 2px #940, .1em .1em .2em rgba(0,0,0,.5);
+}
+
+.rating:not(:checked) > label:hover,
+.rating:not(:checked) > label:hover ~ label {
+    color: gold;
+    text-shadow:1px 1px goldenrod, 2px 2px #B57340, .1em .1em .2em rgba(0,0,0,.5);
+}
+
+.rating > input:checked + label:hover,
+.rating > input:checked + label:hover ~ label,
+.rating > input:checked ~ label:hover,
+.rating > input:checked ~ label:hover ~ label,
+.rating > label:hover ~ input:checked ~ label {
+    color: #ea0;
+    text-shadow:1px 1px goldenrod, 2px 2px #B57340, .1em .1em .2em rgba(0,0,0,.5);
+}
+
+.rating > label:active {
+    position:relative;
+    top:2px;
+    left:2px;
+}
+
+/* end of Lea's code */
+
+/*
+ * Clearfix from html5 boilerplate
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* my stuff */
+#status, button {
+    margin: 20px 0;
 }
 

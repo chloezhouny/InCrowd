@@ -13,7 +13,7 @@
 
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-     <link type="text/css" rel="stylesheet" href="public/materialize.min.css"  media="screen,projection"/>
+ <!--     <link type="text/css" rel="stylesheet" href="public/materialize.min.css"  media="screen,projection"/> -->
      <link type ="text/css" rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
        <script src="https://kit.fontawesome.com/5ff8955d5b.js"></script>
 
@@ -27,39 +27,40 @@
 
 </head>
 <body>
-
-<div class="container-fluid" id = "header">
-  <p><a href="/api/survey">API Survey Link</a>    <a href="https://github.com/chloezhouny/InCrowd">Github Repo</a>
+<div>
+<div class="d-flex flex-row justify-content-center" id = "header">
+    <h1>InCrowd</h1>
+    <a href="/api/survey">API Survey Link</a>    
+    <a href="https://github.com/chloezhouny/InCrowd">Github Repo</a>
+    
 </div>
 
 
-
 <div class = "container" id = "left">
-  <h1>InCrowd</h1>
-  <div class="row">
-    <form class="col s12">
-      <div class="row">
-        <div class="input-field col s3">
-          <input id="name" type="text" class="validate">
-          <label for="name">Your Name</label>
-        </div>       
-      </div>
-      <div class = "row">
-       <div class="input-field col s3">
-          <input id="songLink" type="text" class="validate">
-          <label for="songLink">Favorite song link</label>
-        </div>
-      </div>
-      <div class = "row" id = "submitSection">
-         <p uk-margin>
-          <a class="uk-button uk-button-default" id = "submit" href="#modal-media-youtube" uk-toggle>Submit</a>
-        </p>
-    </div>
-    </form>
-  </div>
- 
+  <div class = "container d-flex justify-content-center">
+          <form>
+              <div class="uk-margin text-center">
+                  <div class="uk-inline">
+                      <a class="uk-form-icon" href="#" uk-icon="icon: user"></a>
+                      <input class="uk-input" type="text" placeholder="Your Name">
+                  </div>
+              </div>
 
-    
+              <div class="uk-margin text-center">
+                  <div class="uk-inline">
+                      <a class="uk-form-icon uk-form-icon-flip" href="#" uk-icon="icon: link"></a>
+                      <input class="uk-input" type="text" placeholder = "Favorite Song Link">
+                  </div>
+              </div>
+
+              <div class = "text-center" id = "submitNameSection">
+                 <p uk-margin>
+                  <a class="uk-button uk-button-default" id = "submitName">Submit</a>
+                </p>
+              </div>
+
+        </form>
+  </div>
 </div>
 
 
@@ -78,12 +79,26 @@
                         <img src="public/images/classical.jpg" alt="">
                     </div>
                     <div class="uk-card-body question">
-                        <h3 class="uk-card-title">Classical</h3>                       
-                        <form action="#">
+                        <h3 class="uk-card-title">Classical</h3>     
+
+                        <!-- <form action="#">
                           <p class="range-field">
                             <input type="range" class= "test" id="test0" data-number = "0" min="1" max="5" />
                           </p>
+                        </form> -->
+                        <p>
+                        <form class = "stars">
+                            <fieldset class="rating">
+                                <legend>Please rate:</legend>
+                                <input type="radio" id="star05" name="rating" value="5" data-number = "0"/><label for="star05"  title="Rocks!">5 stars</label>
+                                <input type="radio" id="star04" name="rating" value="4" data-number = "0"/><label for="star04" title="Pretty good">4 stars</label>
+                                <input type="radio" id="star03" name="rating" value="3" data-number = "0"/><label for="star03" title="Meh">3 stars</label>
+                                <input type="radio"  id="star02" name="rating" value="2" data-number = "0"/><label for="star02" title="Kinda bad">2 stars</label>
+                                <input type="radio"  id="star01" name="rating" value="1" data-number = "0"/><label for="star01" title="Sucks big time">1 star</label>
+                            </fieldset>
+                            <div class="clearfix"></div>
                         </form>
+                      </p>
                     </div>
                 </div>
             </li>
@@ -94,13 +109,29 @@
                     </div>
                     <div class="uk-card-body question">
                         <h3 class="uk-card-title">Blues</h3>
-                        <form action="#">
+                        <p>
+    
+                        <form class = "stars">
+                            <fieldset class="rating">
+                                <legend>Please rate:</legend>
+                                <input type="radio" id="star15" name="rating" value="5"  data-number = "1" /><label for="star15"title="Rocks!">5 stars</label>
+                                <input type="radio" id="star14" name="rating" value="4"  data-number = "1" /><label for="star14" title="Pretty good">4 stars</label>
+                                <input type="radio" id="star13" name="rating" value="3"  data-number = "1" /><label for="star13" title="Meh">3 stars</label>
+                                <input type="radio"  id="star12" name="rating" value="2"  data-number = "1" /><label for="star12" title="Kinda bad">2 stars</label>
+                                <input type="radio"  id="star11" name="rating" value="1"  data-number = "1" /><label for="star11" title="Sucks big time">1 star</label>
+                            </fieldset>
+                            <div class="clearfix"></div>
+                
+                        </form>
+                      </p>
+                    </div>
+                        <!-- <form action="#">
                           <p class="range-field">
                             <input type="range" class= "test" id="test1" data-number = "1" min="1" max="5" />
                           </p>
-                        </form>
+                        </form> -->
                     </div>
-                </div>
+           
             </li>
             <li>
                 <div class="uk-card uk-card-default">
@@ -109,12 +140,26 @@
                     </div>
                     <div class="uk-card-body question">
                         <h3 class="uk-card-title">Jazz</h3>
-                        <form action="#">
+                        <p>
+                        <form class = "stars">
+                            <fieldset class="rating">
+                                <legend>Please rate:</legend>
+                                <input type="radio" id="star52" name="rating" value="5" /><label for="star52" title="Rocks!">5 stars</label>
+                                <input type="radio" id="star42" name="rating" value="4" /><label for="star42" title="Pretty good">4 stars</label>
+                                <input type="radio" id="star32" name="rating" value="3" /><label for="star32" title="Meh">3 stars</label>
+                                <input type="radio"  id="star22" name="rating" value="2" /><label for="star22" title="Kinda bad">2 stars</label>
+                                <input type="radio"  id="star12" name="rating" value="1" /><label for="star12" title="Sucks big time">1 star</label>
+                            </fieldset>
+             
+                        </form>
+                      </p>
+                    </div>
+                        <!-- <form action="#">
                           <p class="range-field">
                             <input type="range" class= "test" id="test2" data-number = "2" min="1" max="5" />
                           </p>
-                        </form>
-                    </div>
+                        </form> -->
+             
                 </div>
             </li>
             <li>
@@ -124,12 +169,26 @@
                     </div>
                     <div class="uk-card-body question">
                         <h3 class="uk-card-title">EDM</h3>
-                        <form action="#">
+                        <p>
+                        <form class = "stars">
+                            <fieldset class="rating">
+                                <legend>Please rate:</legend>
+                                <input type="radio" id="star5" name="rating" value="5" /><label for="star5" title="Rocks!">5 stars</label>
+                                <input type="radio" id="star4" name="rating" value="4" /><label for="star4" title="Pretty good">4 stars</label>
+                                <input type="radio" id="star3" name="rating" value="3" /><label for="star3" title="Meh">3 stars</label>
+                                <input type="radio"  id="star2" name="rating" value="2" /><label for="star2" title="Kinda bad">2 stars</label>
+                                <input type="radio"  id="star1" name="rating" value="1" /><label for="star1" title="Sucks big time">1 star</label>
+                            </fieldset>
+
+                        </form>
+                      </p>
+                    </div>
+                        <!-- <form action="#">
                           <p class="range-field">
                             <input type="range" class= "test" id="test3" data-number = "3" min="1" max="5" />
                           </p>
-                        </form>
-                    </div>
+                        </form> -->
+           
                 </div>
             </li>
             <li>
@@ -139,13 +198,27 @@
                     </div>
                     <div class="uk-card-body question">
                         <h3 class="uk-card-title">Rock</h3>
-                        <form action="#">
+                        <p>
+                        <form class = "stars">
+                            <fieldset class="rating">
+                                <legend>Please rate:</legend>
+                                <input type="radio" id="star5" name="rating" value="5" /><label for="star5" title="Rocks!">5 stars</label>
+                                <input type="radio" id="star4" name="rating" value="4" /><label for="star4" title="Pretty good">4 stars</label>
+                                <input type="radio" id="star3" name="rating" value="3" /><label for="star3" title="Meh">3 stars</label>
+                                <input type="radio"  id="star2" name="rating" value="2" /><label for="star2" title="Kinda bad">2 stars</label>
+                                <input type="radio"  id="star1" name="rating" value="1" /><label for="star1" title="Sucks big time">1 star</label>
+                            </fieldset>
+                   
+                        </form>
+                      </p>
+                    </div>
+                       <!--  <form action="#">
                           <p class="range-field">
                             <input type="range" class= "test" id="test4" data-number = "4" min="1" max="5" />
                           </p>
-                        </form>
+                        </form> -->
                     </div>
-                </div>
+     
             </li>
             <li>
                 <div class="uk-card uk-card-default">
@@ -154,13 +227,28 @@
                     </div>
                     <div class="uk-card-body question">
                         <h3 class="uk-card-title">R&B</h3>
-                        <form action="#">
+                        <p>
+                        <form class = "stars">
+                            <fieldset class="rating">
+                                <legend>Please rate:</legend>
+                                <input type="radio" id="star5" name="rating" value="5" /><label for="star5" title="Rocks!">5 stars</label>
+                                <input type="radio" id="star4" name="rating" value="4" /><label for="star4" title="Pretty good">4 stars</label>
+                                <input type="radio" id="star3" name="rating" value="3" /><label for="star3" title="Meh">3 stars</label>
+                                <input type="radio"  id="star2" name="rating" value="2" /><label for="star2" title="Kinda bad">2 stars</label>
+                                <input type="radio"  id="star1" name="rating" value="1" /><label for="star1" title="Sucks big time">1 star</label>
+                            </fieldset>
+
+       
+                        </form>
+                      </p>
+                    </div>
+                       <!--  <form action="#">
                           <p class="range-field">
                             <input type="range" class= "test" id="test5" data-number = "5" min="1" max="5" />
                           </p>
-                        </form>
+                        </form> -->
                     </div>
-                </div>
+  
             </li>
             <li>
                 <div class="uk-card uk-card-default">
@@ -169,13 +257,27 @@
                     </div>
                     <div class="uk-card-body question">
                         <h3 class="uk-card-title">Funk</h3>
-                        <form action="#">
+                      <p>
+                        <form class = "stars">
+                            <fieldset class="rating">
+                                <legend>Please rate:</legend>
+                                <input type="radio" id="star5" name="rating" value="5" /><label for="star5" title="Rocks!">5 stars</label>
+                                <input type="radio" id="star4" name="rating" value="4" /><label for="star4" title="Pretty good">4 stars</label>
+                                <input type="radio" id="star3" name="rating" value="3" /><label for="star3" title="Meh">3 stars</label>
+                                <input type="radio"  id="star2" name="rating" value="2" /><label for="star2" title="Kinda bad">2 stars</label>
+                                <input type="radio"  id="star1" name="rating" value="1" /><label for="star1" title="Sucks big time">1 star</label>
+                            </fieldset>
+       
+                        </form>
+                      </p>
+                    </div>
+                        <!-- <form action="#">
                           <p class="range-field">
                             <input type="range" class= "test" id="test6" data-number = "6" min="1" max="5" />
                           </p>
-                        </form>
+                        </form> -->
                     </div>
-                </div>
+        
             </li>
             <li>
                 <div class="uk-card uk-card-default">
@@ -184,12 +286,26 @@
                     </div>
                     <div class="uk-card-body question">
                         <h3 class="uk-card-title">Hip-pop</h3>
-                        <form action="#">
+                      <p>
+                        <form class = "stars">
+                            <fieldset class="rating">
+                                <legend>Please rate:</legend>
+                                <input type="radio" id="star5" name="rating" value="5" /><label for="star5" title="Rocks!">5 stars</label>
+                                <input type="radio" id="star4" name="rating" value="4" /><label for="star4" title="Pretty good">4 stars</label>
+                                <input type="radio" id="star3" name="rating" value="3" /><label for="star3" title="Meh">3 stars</label>
+                                <input type="radio"  id="star2" name="rating" value="2" /><label for="star2" title="Kinda bad">2 stars</label>
+                                <input type="radio"  id="star1" name="rating" value="1" /><label for="star1" title="Sucks big time">1 star</label>
+                            </fieldset>
+  
+                        </form>
+                      </p>
+                    </div>
+                     <!--    <form action="#">
                           <p class="range-field">
                             <input type="range" class= "test" id="test7" data-number = "7" min="1" max="5" />
                           </p>
-                        </form>
-                    </div>
+                        </form> -->
+        
                 </div>
             </li>
             <li>
@@ -199,12 +315,26 @@
                     </div>
                     <div class="uk-card-body question">
                         <h3 class="uk-card-title">Country</h3>
-                        <form action="#">
+                        <p>
+                          <form class = "stars">
+                            <fieldset class="rating">
+                                <legend>Please rate:</legend>
+                                <input type="radio" id="star5" name="rating" value="5" /><label for="star5" title="Rocks!">5 stars</label>
+                                <input type="radio" id="star4" name="rating" value="4" /><label for="star4" title="Pretty good">4 stars</label>
+                                <input type="radio" id="star3" name="rating" value="3" /><label for="star3" title="Meh">3 stars</label>
+                                <input type="radio"  id="star2" name="rating" value="2" /><label for="star2" title="Kinda bad">2 stars</label>
+                                <input type="radio"  id="star1" name="rating" value="1" /><label for="star1" title="Sucks big time">1 star</label>
+                            </fieldset>
+       
+                        </form>
+                      </p>
+                    </div>
+                        <!-- <form action="#">
                           <p class="range-field">
                             <input type="range" class= "test" id="test8" data-number = "8" min="1" max="5" />
                           </p>
-                        </form>
-                    </div>
+                        </form> -->
+      
                 </div>
             </li>
 
@@ -215,12 +345,25 @@
                     </div>
                     <div class="uk-card-body question">
                         <h3 class="uk-card-title">Indie</h3>
-                        <form action="#">
+                      <p>
+                        <form class = "stars">
+                            <fieldset class="rating">
+                                <legend>Please rate:</legend>
+                                <input type="radio" id="star5" name="rating" value="5" /><label for="star5" title="Rocks!">5 stars</label>
+                                <input type="radio" id="star4" name="rating" value="4" /><label for="star4" title="Pretty good">4 stars</label>
+                                <input type="radio" id="star3" name="rating" value="3" /><label for="star3" title="Meh">3 stars</label>
+                                <input type="radio"  id="star2" name="rating" value="2" /><label for="star2" title="Kinda bad">2 stars</label>
+                                <input type="radio"  id="star1" name="rating" value="1" /><label for="star1" title="Sucks big time">1 star</label>
+                            </fieldset>
+                        </form>
+                      </p>
+                    </div>
+                        <!-- <form action="#">
                           <p class="range-field">
                             <input type="range" class= "test" id="test9" data-number = "9" min="1" max="5" />
                           </p>
-                        </form>
-                    </div>
+                        </form> -->
+
                 </div>
             </li>
         </ul>
@@ -235,7 +378,11 @@
     </div>
 
     <ul class="uk-slider-nav uk-dotnav uk-flex-center uk-margin"></ul>
-
+    <div class = "row" id = "submitSection">
+         <p uk-margin>
+          <a class="uk-button uk-button-default" id = "submit" href="#modal-media-youtube" uk-toggle>Submit</a>
+        </p>
+    </div>
 </div>
 </div>
 
@@ -262,22 +409,54 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.5/js/uikit.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.5/js/uikit-icons.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script type="text/javascript" src="public/materialize.min.js"></script>
+<!-- <script type="text/javascript" src="public/materialize.min.js"></script> -->
 
 <script>
-var userAnswer = [];
-var idNameArr = ['test0', 'test1', 'test2', 'test3','test4','test5','test6','test7', 'test8','test9'];
 
-for (var i = 0; i < idNameArr.length; i++)
-{
-  document.getElementById(idNameArr[i]).oninput = function()
-  {
-    var index = this.getAttribute("data-number");
-    console.log(this.value);
-    userAnswer[index] = parseInt(this.value);
-    console.log(userAnswer);
-  }
-}
+
+$("#left").show();
+$("#albums").hide();
+
+var userAnswer = [];
+// var idNameArr = ['.test1 :radio', 'test1', 'test2', 'test3','test4','test5','test6','test7', 'test8','test9'];
+// var idNameArr = ['.test0 :radio', '.test1 :radio', '.test2 :radio', '.test3 :radio','.test4 :radio','.test5 :radio', '.test6 :radio','.test7 :radio', '.test8 :radio','.test9 :radio'];
+
+
+
+document.getElementById('submitName').onclick = function()  {
+
+  $("#left").hide();
+  $("#albums").show();
+
+// for (var i = 0; i < idNameArr.length; i++)
+// {
+//   document.getElementById(idNameArr[i]).oninput = function()
+//   {
+//     var index = this.getAttribute("data-number");
+//     console.log(this.value);
+//     userAnswer[index] = parseInt(this.value);
+//     console.log(userAnswer);
+//   }
+// }
+
+
+    $(document).on("click", ".stars :radio", function(event)
+    {   
+        var selector = ".stars :radio" + "[name=rating]:checked";
+        // var value = $('.test1 :radio[name=rating]:checked').val();
+         var value = $(selector).val();
+         var index = this.getAttribute("data-number");
+         console.log(index);
+        console.log(value);
+        userAnswer[index] = parseInt(value); 
+        console.log(userAnswer);    
+    });
+
+  };
+   
+
+
+
 
 
 
@@ -322,6 +501,19 @@ $("#submit").on("click", function(event) {
           });
     }
 });
+
+
+    // $("form#ratingForm").submit(function(e) 
+    // {
+    //     e.preventDefault(); // prevent the default click action from being performed
+    //     if ($("#ratingForm :radio:checked").length == 0) {
+    //         $('#status').html("nothing checked");
+    //         return false;
+    //     } else {
+    //         $('#status').html( 'You picked ' + $('input:radio[name=rating]:checked').val() );
+    //     }
+    // });
+
 
 
  
