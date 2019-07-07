@@ -1,56 +1,82 @@
 html
 {
-	min-height:100vh;
+	height: 100%;
+	position: relative;
+background-color: #270032;
+
 }
 
 
 body
 {
-	background-image: url(images/bg4.jpg);
+	background-image: url(images/bg8.jpg);
 	background-size: cover;
-	min-height: 100vh;
+	height: 92%;
+	width: 100%;
+	position: relative;
+
+
+}
+
+#bodyContainer
+{
+/*	background-color: rgb(255, 102, 102, 0.2);*/
+	background-color: rgb(0, 0, 0, 0.6);
+	height: 100%;
 	position: relative;
 }
 
 
-
-
-
-
-#header h1
+#brand
 {
-/*	color: #33FFB5;*/
+	position: absolute;
+	left: 5%;
+	top: 10%;
+}
+
+
+h1
+{
+
 	color: #4AE5AD;
 	font-size: 40px;
 	letter-spacing: 0.3em;
 	font-weight: bold;
-
 }
-
-
 
 
 
 #header a
 {
-	color: black;
+	color: white;
 	margin-right: 2%;
+	font-size: 14px;
+	font-weight: bold;
+	margin-top: 4%;
+	letter-spacing: 0.05em;
+	transition: .3s ease-in-out;
 }
 
+
 #header a:visited {
-  color: #header;
+  color: white;
+  text-decoration: none;
+   transition: .3s ease-in-out;
 }
 
 
 #header a:hover {
-  color: pink;
-  text-decoration: underline;
+  color: #4AE5AD;
+  text-decoration: none;
+   transition: .3s ease-in-out;
 
 }
 
 /* selected link */
 #header a:active {
-  color: pink;
+  color: #4AE5AD;
+  text-decoration: none;
+   transition: .3s ease-in-out;
 }
 
 
@@ -71,12 +97,34 @@ body
 .uk-input:focus
 {
 	background-color: transparent;
-	border-color: pink;
+	border-color:  #4AE5AD;
 }
 
 
 
+#submitName
+{
+	border: none;
+	border-radius: 35px;
+	background-color: rgb(30, 215, 97);
+	margin-top: 5%;
+	color: white;
+	font-weight: bold;
+	transition: .4s ease-in-out;
+}
 
+#submitName:hover
+{
+  transform: scale(1.1) perspective(1px);
+  
+}
+
+
+#submitName:active {
+   transform: translate(0px, 5px);
+  -webkit-transform: translate(0px, 5px);
+  box-shadow: 0px 1px 0px 0px;
+}
 
 #submitSection
 {
@@ -87,11 +135,16 @@ body
 
 #albums
 {
-  width: 40%;
-  margin-top: 5%;
+  width: 50%;
+  margin-top: 12%;
   z-index: 100;
 }
 
+
+#stars
+{
+	margin-top: 5%;
+}
 
 
 .uk-card-default
@@ -146,17 +199,21 @@ body
 }
 
 
+iframe
+{
+	background-color: rgb(0,0,0,0.4);
+}
 
 
-
+/* Credit to Alpesh Patel: http://jsfiddle.net/ashuslove/zLm4f/6/, changed stars style */
 
 .rating {
     float:left;
+
 }
 
-/* :not(:checked) is a filter, so that browsers that don’t support :checked don’t 
-   follow these rules. Every browser that supports :checked also supports :not(), so
-   it doesn’t make the test unnecessarily selective */
+
+
 .rating:not(:checked) > input {
     position:absolute;
     top:-9999px;
@@ -170,25 +227,29 @@ body
     overflow:hidden;
     white-space:nowrap;
     cursor:pointer;
-    font-size:200%;
+    font-size:150%;
     line-height:1.2;
-    color:#ddd;
-    text-shadow:1px 1px #bbb, 2px 2px #666, .1em .1em .2em rgba(0,0,0,.5);
+    color:white;
+    /*text-shadow:1px 1px #bbb, 2px 2px #666, .1em .1em .2em rgba(0,0,0,.5);*/
 }
 
 .rating:not(:checked) > label:before {
-    content: '★ ';
+    /*content: '★ ';*/
+/*    content: '⭑ ';*/
+    content: '♡ ';
+
 }
 
 .rating > input:checked ~ label {
-    color: #f70;
-    text-shadow:1px 1px #c60, 2px 2px #940, .1em .1em .2em rgba(0,0,0,.5);
+    color: rgb(30, 215, 97);
+   /* text-shadow:1px 1px #c60, 2px 2px #940, .1em .1em .2em rgba(0,0,0,.5);*/
 }
 
 .rating:not(:checked) > label:hover,
 .rating:not(:checked) > label:hover ~ label {
-    color: gold;
-    text-shadow:1px 1px goldenrod, 2px 2px #B57340, .1em .1em .2em rgba(0,0,0,.5);
+    color: rgb(30, 215, 97);
+
+   /* text-shadow:1px 1px goldenrod, 2px 2px #B57340, .1em .1em .2em rgba(0,0,0,.5);*/
 }
 
 .rating > input:checked + label:hover,
@@ -196,8 +257,9 @@ body
 .rating > input:checked ~ label:hover,
 .rating > input:checked ~ label:hover ~ label,
 .rating > label:hover ~ input:checked ~ label {
-    color: #ea0;
-    text-shadow:1px 1px goldenrod, 2px 2px #B57340, .1em .1em .2em rgba(0,0,0,.5);
+    color: rgb(30, 215, 97);
+
+   /* text-shadow:1px 1px goldenrod, 2px 2px #B57340, .1em .1em .2em rgba(0,0,0,.5);*/
 }
 
 .rating > label:active {

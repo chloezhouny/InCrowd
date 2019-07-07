@@ -16,6 +16,8 @@
  <!--     <link type="text/css" rel="stylesheet" href="public/materialize.min.css"  media="screen,projection"/> -->
      <link type ="text/css" rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
        <script src="https://kit.fontawesome.com/5ff8955d5b.js"></script>
+       <link href="https://fonts.googleapis.com/css?family=Archivo+Black|Exo+2:800|Open+Sans:300|Work+Sans:700&display=swap" rel="stylesheet">
+
 
       <!--Let browser know website is optimized for mobile-->
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -26,14 +28,23 @@
 
 
 </head>
-<body>
-<div>
-<div class="d-flex flex-row justify-content-center" id = "header">
-    <h1>InCrowd</h1>
-    <a href="/api/survey">API Survey Link</a>    
-    <a href="https://github.com/chloezhouny/InCrowd">Github Repo</a>
-    
-</div>
+<body class = "uk-background-fixed uk-background-center-center">
+<div id = "bodyContainer">
+<header class = "container-fluid pt-5">
+  <div class = "row">
+      <div id="brand">
+        <h1>InCrowd</h1>
+      </div>
+
+      <div class="col-12 d-flex flex-row justify-content-center" id = "header">
+          <a id = "home" href="/">HOME</a> 
+          <a href="/api/survey">API Survey Link</a>    
+          <a href="https://github.com/chloezhouny/InCrowd">Github Repo</a>
+          <div>
+
+      </div>
+    </div>
+</header>
 
 
 <div class = "container" id = "left">
@@ -42,21 +53,21 @@
               <div class="uk-margin text-center">
                   <div class="uk-inline">
                       <a class="uk-form-icon" href="#" uk-icon="icon: user"></a>
-                      <input class="uk-input" type="text" placeholder="Your Name">
+                      <input class="uk-input uk-form-width-large" type="text" placeholder="Your Name" id="name">
                   </div>
               </div>
 
               <div class="uk-margin text-center">
                   <div class="uk-inline">
                       <a class="uk-form-icon uk-form-icon-flip" href="#" uk-icon="icon: link"></a>
-                      <input class="uk-input" type="text" placeholder = "Favorite Song Link">
+                      <input class="uk-input uk-form-width-large" type="text" placeholder = "Favorite Song Link" id="songLink">
                   </div>
               </div>
 
               <div class = "text-center" id = "submitNameSection">
                  <p uk-margin>
-                  <a class="uk-button uk-button-default" id = "submitName">Submit</a>
-                </p>
+                  <a class="uk-button uk-button-default uk-width-1-2" id = "submitName">Submit</a>
+                  </p>
               </div>
 
         </form>
@@ -70,26 +81,25 @@
 <div class = "container" id = "albums">
 <div uk-slider="center: true">
 
-    <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1">
+    <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slider="clsActivated: uk-transition-active; center: true">
 
-        <ul class="uk-slider-items uk-child-width-1-1@s uk-grid">
-            <li>
+        <ul class="uk-slider-items uk-child-width-1-2@s uk-grid">
+            <li >
                 <div class="uk-card uk-card-default">
-                    <div class="uk-card-media-top">
-                        <img src="public/images/classical.jpg" alt="">
+                    <div class= "uk-card-media-top uk-panel uk-transition-toggle" tabindex="0">
+                        <img src="public/images/blues.jpg" width="100%" alt="">
+                        
+                        <div class="uk-position-bottom uk-text-center uk-transition-slide-bottom p-0">  
+                            
+                            <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DXcnkReojaCnV" width="100%" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                        </div>
+              
                     </div>
-                    <div class="uk-card-body question">
-                        <h3 class="uk-card-title">Classical</h3>     
+                  
+                    <div class="uk-card-body question d-flex flex-row justify-content-center">  
 
-                        <!-- <form action="#">
-                          <p class="range-field">
-                            <input type="range" class= "test" id="test0" data-number = "0" min="1" max="5" />
-                          </p>
-                        </form> -->
-                        <p>
                         <form class = "stars">
                             <fieldset class="rating">
-                                <legend>Please rate:</legend>
                                 <input type="radio" id="star05" name="rating" value="5" data-number = "0"/><label for="star05"  title="Rocks!">5 stars</label>
                                 <input type="radio" id="star04" name="rating" value="4" data-number = "0"/><label for="star04" title="Pretty good">4 stars</label>
                                 <input type="radio" id="star03" name="rating" value="3" data-number = "0"/><label for="star03" title="Meh">3 stars</label>
@@ -98,272 +108,219 @@
                             </fieldset>
                             <div class="clearfix"></div>
                         </form>
-                      </p>
+
                     </div>
                 </div>
             </li>
             <li>
                 <div class="uk-card uk-card-default">
-                    <div class="uk-card-media-top">
-                        <img src="public/images/classical.jpg" alt="">
+                    <div class="uk-card-media-top uk-panel uk-transition-toggle" tabindex="0">
+                        <img src="public/images/classical.jpg"  width="100%" alt="">
+                           <div class="uk-position-bottom uk-text-center uk-transition-slide-bottom p-0">  
+                            <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DWWEJlAGA9gs0" width="100%" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                           </div>
                     </div>
-                    <div class="uk-card-body question">
-                        <h3 class="uk-card-title">Blues</h3>
-                        <p>
-    
+                    <div class="uk-card-body question d-flex flex-row justify-content-center">
+
                         <form class = "stars">
                             <fieldset class="rating">
-                                <legend>Please rate:</legend>
                                 <input type="radio" id="star15" name="rating" value="5"  data-number = "1" /><label for="star15"title="Rocks!">5 stars</label>
                                 <input type="radio" id="star14" name="rating" value="4"  data-number = "1" /><label for="star14" title="Pretty good">4 stars</label>
                                 <input type="radio" id="star13" name="rating" value="3"  data-number = "1" /><label for="star13" title="Meh">3 stars</label>
                                 <input type="radio"  id="star12" name="rating" value="2"  data-number = "1" /><label for="star12" title="Kinda bad">2 stars</label>
                                 <input type="radio"  id="star11" name="rating" value="1"  data-number = "1" /><label for="star11" title="Sucks big time">1 star</label>
                             </fieldset>
-                            <div class="clearfix"></div>
-                
+                            <div class="clearfix"></div>              
                         </form>
-                      </p>
                     </div>
-                        <!-- <form action="#">
-                          <p class="range-field">
-                            <input type="range" class= "test" id="test1" data-number = "1" min="1" max="5" />
-                          </p>
-                        </form> -->
                     </div>
            
             </li>
             <li>
                 <div class="uk-card uk-card-default">
-                    <div class="uk-card-media-top">
-                        <img src="public/images/classical.jpg" alt="">
-                    </div>
-                    <div class="uk-card-body question">
-                        <h3 class="uk-card-title">Jazz</h3>
-                        <p>
+                    <div class="uk-card-media-top uk-panel uk-transition-toggle" tabindex="0">
+                        <img src="public/images/country.jpg"  width="100%" alt="">
+                        <div class="uk-position-bottom uk-text-center uk-transition-slide-bottom p-0">  
+                            <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DX1lVhptIYRda" width="100%" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                        </div>  
+                    </div>               
+                    <div class="uk-card-body question d-flex flex-row justify-content-center">
                         <form class = "stars">
                             <fieldset class="rating">
-                                <legend>Please rate:</legend>
-                                <input type="radio" id="star52" name="rating" value="5" /><label for="star52" title="Rocks!">5 stars</label>
-                                <input type="radio" id="star42" name="rating" value="4" /><label for="star42" title="Pretty good">4 stars</label>
-                                <input type="radio" id="star32" name="rating" value="3" /><label for="star32" title="Meh">3 stars</label>
-                                <input type="radio"  id="star22" name="rating" value="2" /><label for="star22" title="Kinda bad">2 stars</label>
-                                <input type="radio"  id="star12" name="rating" value="1" /><label for="star12" title="Sucks big time">1 star</label>
-                            </fieldset>
-             
+                                <input type="radio" id="star52" name="rating" value="5" data-number = "2"/><label for="star52" title="Rocks!">5 stars</label>
+                                <input type="radio" id="star42" name="rating" value="4" data-number = "2"/><label for="star42" title="Pretty good">4 stars</label>
+                                <input type="radio" id="star32" name="rating" value="3" data-number = "2"/><label for="star32" title="Meh">3 stars</label>
+                                <input type="radio"  id="star22" name="rating" value="2" data-number = "2"/><label for="star22" title="Kinda bad">2 stars</label>
+                                <input type="radio"  id="star12" name="rating" value="1" data-number = "2"/><label for="star12" title="Sucks big time">1 star</label>
+                            </fieldset>      
                         </form>
-                      </p>
-                    </div>
-                        <!-- <form action="#">
-                          <p class="range-field">
-                            <input type="range" class= "test" id="test2" data-number = "2" min="1" max="5" />
-                          </p>
-                        </form> -->
-             
+                    </div>            
                 </div>
             </li>
             <li>
                 <div class="uk-card uk-card-default">
-                    <div class="uk-card-media-top">
-                        <img src="public/images/classical.jpg" alt="">
-                    </div>
-                    <div class="uk-card-body question">
-                        <h3 class="uk-card-title">EDM</h3>
-                        <p>
+                    <div class="uk-card-media-top uk-panel uk-transition-toggle" tabindex="0">
+                        <img src="public/images/edm.jpg"  width="100%" alt="">
+                        <div class="uk-position-bottom uk-text-center uk-transition-slide-bottom p-0">  
+                            <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DX4dyzvuaRJ0n" width="100%" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                        </div> 
+                    </div>                                  
+                    <div class="uk-card-body question d-flex flex-row justify-content-center">
                         <form class = "stars">
                             <fieldset class="rating">
-                                <legend>Please rate:</legend>
-                                <input type="radio" id="star5" name="rating" value="5" /><label for="star5" title="Rocks!">5 stars</label>
-                                <input type="radio" id="star4" name="rating" value="4" /><label for="star4" title="Pretty good">4 stars</label>
-                                <input type="radio" id="star3" name="rating" value="3" /><label for="star3" title="Meh">3 stars</label>
-                                <input type="radio"  id="star2" name="rating" value="2" /><label for="star2" title="Kinda bad">2 stars</label>
-                                <input type="radio"  id="star1" name="rating" value="1" /><label for="star1" title="Sucks big time">1 star</label>
+                                <input type="radio" id="star53" name="rating" value="5" data-number = "3"/><label for="star53" title="Rocks!">5 stars</label>
+                                <input type="radio" id="star43" name="rating" value="4" data-number = "3"/><label for="star43" title="Pretty good">4 stars</label>
+                                <input type="radio" id="star33" name="rating" value="3" data-number = "3"/><label for="star33" title="Meh">3 stars</label>
+                                <input type="radio"  id="star23" name="rating" value="2" data-number = "3"/><label for="star23" title="Kinda bad">2 stars</label>
+                                <input type="radio"  id="star13" name="rating" value="1" data-number = "3"/><label for="star13" title="Sucks big time">1 star</label>
                             </fieldset>
-
                         </form>
-                      </p>
                     </div>
-                        <!-- <form action="#">
-                          <p class="range-field">
-                            <input type="range" class= "test" id="test3" data-number = "3" min="1" max="5" />
-                          </p>
-                        </form> -->
            
                 </div>
             </li>
             <li>
                 <div class="uk-card uk-card-default">
-                    <div class="uk-card-media-top">
-                        <img src="public/images/classical.jpg" alt="">
-                    </div>
-                    <div class="uk-card-body question">
-                        <h3 class="uk-card-title">Rock</h3>
-                        <p>
+                    <div class="uk-card-media-top uk-panel uk-transition-toggle" tabindex="0">
+                        <img src="public/images/jazz.jpg"  width="100%" alt="">
+                        <div class="uk-position-bottom uk-text-center uk-transition-slide-bottom p-0">  
+                            <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DXbITWG1ZJKYt" width="100%" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                        </div>  
+                    </div>               
+                    <div class="uk-card-body question d-flex flex-row justify-content-center">
                         <form class = "stars">
                             <fieldset class="rating">
-                                <legend>Please rate:</legend>
-                                <input type="radio" id="star5" name="rating" value="5" /><label for="star5" title="Rocks!">5 stars</label>
-                                <input type="radio" id="star4" name="rating" value="4" /><label for="star4" title="Pretty good">4 stars</label>
-                                <input type="radio" id="star3" name="rating" value="3" /><label for="star3" title="Meh">3 stars</label>
-                                <input type="radio"  id="star2" name="rating" value="2" /><label for="star2" title="Kinda bad">2 stars</label>
-                                <input type="radio"  id="star1" name="rating" value="1" /><label for="star1" title="Sucks big time">1 star</label>
+  
+                                <input type="radio" id="star54" name="rating" value="5" data-number = "4"/><label for="star54" title="Rocks!">5 stars</label>
+                                <input type="radio" id="star44" name="rating" value="4" data-number = "4"/><label for="star44" title="Pretty good">4 stars</label>
+                                <input type="radio" id="star34" name="rating" value="3" data-number = "4"/><label for="star34" title="Meh">3 stars</label>
+                                <input type="radio"  id="star24" name="rating" value="2" data-number = "4"/><label for="star24" title="Kinda bad">2 stars</label>
+                                <input type="radio"  id="star14" name="rating" value="1" data-number = "4"/><label for="star14" title="Sucks big time">1 star</label>
                             </fieldset>
                    
                         </form>
-                      </p>
                     </div>
-                       <!--  <form action="#">
-                          <p class="range-field">
-                            <input type="range" class= "test" id="test4" data-number = "4" min="1" max="5" />
-                          </p>
-                        </form> -->
                     </div>
      
             </li>
             <li>
                 <div class="uk-card uk-card-default">
-                    <div class="uk-card-media-top">
-                        <img src="public/images/classical.jpg" alt="">
-                    </div>
-                    <div class="uk-card-body question">
-                        <h3 class="uk-card-title">R&B</h3>
-                        <p>
+                    <div class="uk-card-media-top uk-panel uk-transition-toggle" tabindex="0">
+                        <img src="public/images/rap.jpg"  width="100%" alt="">
+                        <div class="uk-position-bottom uk-text-center uk-transition-slide-bottom p-0">  
+                            <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DX0XUsuxWHRQd" width="100%" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                        </div>  
+                    </div>               
+                    <div class="uk-card-body question d-flex flex-row justify-content-center">
                         <form class = "stars">
                             <fieldset class="rating">
-                                <legend>Please rate:</legend>
-                                <input type="radio" id="star5" name="rating" value="5" /><label for="star5" title="Rocks!">5 stars</label>
-                                <input type="radio" id="star4" name="rating" value="4" /><label for="star4" title="Pretty good">4 stars</label>
-                                <input type="radio" id="star3" name="rating" value="3" /><label for="star3" title="Meh">3 stars</label>
-                                <input type="radio"  id="star2" name="rating" value="2" /><label for="star2" title="Kinda bad">2 stars</label>
-                                <input type="radio"  id="star1" name="rating" value="1" /><label for="star1" title="Sucks big time">1 star</label>
+                                <input type="radio" id="star55" name="rating" value="5" data-number = "5"/><label for="star55" title="Rocks!">5 stars</label>
+                                <input type="radio" id="star45" name="rating" value="4" data-number = "5"/><label for="star45" title="Pretty good">4 stars</label>
+                                <input type="radio" id="star35" name="rating" value="3" data-number = "5"/><label for="star35" title="Meh">3 stars</label>
+                                <input type="radio"  id="star25" name="rating" value="2" data-number = "5"/><label for="star25" title="Kinda bad">2 stars</label>
+                                <input type="radio"  id="star15" name="rating" value="1" data-number = "5"/><label for="star15" title="Sucks big time">1 star</label>
                             </fieldset>
 
        
                         </form>
                       </p>
                     </div>
-                       <!--  <form action="#">
-                          <p class="range-field">
-                            <input type="range" class= "test" id="test5" data-number = "5" min="1" max="5" />
-                          </p>
-                        </form> -->
+
                     </div>
   
             </li>
             <li>
                 <div class="uk-card uk-card-default">
-                    <div class="uk-card-media-top">
-                        <img src="public/images/classical.jpg" alt="">
-                    </div>
-                    <div class="uk-card-body question">
-                        <h3 class="uk-card-title">Funk</h3>
-                      <p>
+                    <div class="uk-card-media-top uk-panel uk-transition-toggle" tabindex="0">
+                        <img src="public/images/pop.jpg"  width="100%" alt="">
+                        <div class="uk-position-bottom uk-text-center uk-transition-slide-bottom p-0">  
+                            <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DXbYM3nMM0oPk" width="100%" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                        </div>  
+                    </div>               
+                    <div class="uk-card-body question d-flex flex-row justify-content-center">
                         <form class = "stars">
                             <fieldset class="rating">
-                                <legend>Please rate:</legend>
-                                <input type="radio" id="star5" name="rating" value="5" /><label for="star5" title="Rocks!">5 stars</label>
-                                <input type="radio" id="star4" name="rating" value="4" /><label for="star4" title="Pretty good">4 stars</label>
-                                <input type="radio" id="star3" name="rating" value="3" /><label for="star3" title="Meh">3 stars</label>
-                                <input type="radio"  id="star2" name="rating" value="2" /><label for="star2" title="Kinda bad">2 stars</label>
-                                <input type="radio"  id="star1" name="rating" value="1" /><label for="star1" title="Sucks big time">1 star</label>
+                                <input type="radio" id="star56" name="rating" value="5" data-number = "6"/><label for="star56" title="Rocks!">5 stars</label>
+                                <input type="radio" id="star46" name="rating" value="4" data-number = "6"/><label for="star46" title="Pretty good">4 stars</label>
+                                <input type="radio" id="star36" name="rating" value="3" data-number = "6"/><label for="star36" title="Meh">3 stars</label>
+                                <input type="radio"  id="star26" name="rating" value="2" data-number = "6"/><label for="star26" title="Kinda bad">2 stars</label>
+                                <input type="radio"  id="star16" name="rating" value="1" data-number = "6"/><label for="star16" title="Sucks big time">1 star</label>
                             </fieldset>
        
                         </form>
-                      </p>
                     </div>
-                        <!-- <form action="#">
-                          <p class="range-field">
-                            <input type="range" class= "test" id="test6" data-number = "6" min="1" max="5" />
-                          </p>
-                        </form> -->
+
                     </div>
         
             </li>
             <li>
                 <div class="uk-card uk-card-default">
-                    <div class="uk-card-media-top">
-                        <img src="public/images/classical.jpg" alt="">
-                    </div>
-                    <div class="uk-card-body question">
-                        <h3 class="uk-card-title">Hip-pop</h3>
-                      <p>
+                   <div class="uk-card-media-top uk-panel uk-transition-toggle" tabindex="0">
+                        <img src="public/images/r&b.jpg"  width="100%" alt="">
+                        <div class="uk-position-bottom uk-text-center uk-transition-slide-bottom p-0">  
+                            <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DX4SBhb3fqCJd" width="100%" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                        </div>  
+                    </div>               
+                    <div class="uk-card-body question d-flex flex-row justify-content-center">
                         <form class = "stars">
                             <fieldset class="rating">
-                                <legend>Please rate:</legend>
-                                <input type="radio" id="star5" name="rating" value="5" /><label for="star5" title="Rocks!">5 stars</label>
-                                <input type="radio" id="star4" name="rating" value="4" /><label for="star4" title="Pretty good">4 stars</label>
-                                <input type="radio" id="star3" name="rating" value="3" /><label for="star3" title="Meh">3 stars</label>
-                                <input type="radio"  id="star2" name="rating" value="2" /><label for="star2" title="Kinda bad">2 stars</label>
-                                <input type="radio"  id="star1" name="rating" value="1" /><label for="star1" title="Sucks big time">1 star</label>
+                                <input type="radio" id="star57" name="rating" value="5" data-number = "7"/><label for="star57" title="Rocks!">5 stars</label>
+                                <input type="radio" id="star47" name="rating" value="4" data-number = "7"/><label for="star47" title="Pretty good">4 stars</label>
+                                <input type="radio" id="star37" name="rating" value="3" data-number = "7"/><label for="star37" title="Meh">3 stars</label>
+                                <input type="radio"  id="star27" name="rating" value="2" data-number = "7"/><label for="star27" title="Kinda bad">2 stars</label>
+                                <input type="radio"  id="star17" name="rating" value="1" data-number = "7"/><label for="star17" title="Sucks big time">1 star</label>
                             </fieldset>
   
                         </form>
-                      </p>
                     </div>
-                     <!--    <form action="#">
-                          <p class="range-field">
-                            <input type="range" class= "test" id="test7" data-number = "7" min="1" max="5" />
-                          </p>
-                        </form> -->
+
         
                 </div>
             </li>
             <li>
                 <div class="uk-card uk-card-default">
-                    <div class="uk-card-media-top">
-                        <img src="public/images/classical.jpg" alt="">
-                    </div>
-                    <div class="uk-card-body question">
-                        <h3 class="uk-card-title">Country</h3>
-                        <p>
+                    <div class="uk-card-media-top uk-panel uk-transition-toggle" tabindex="0">
+                        <img src="public/images/rock.jpg"  width="100%" alt="">
+                        <div class="uk-position-bottom uk-text-center uk-transition-slide-bottom p-0">  
+                            <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DWXRqgorJj26U" width="100%" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                        </div>  
+                    </div>               
+                    <div class="uk-card-body question d-flex flex-row justify-content-center">
                           <form class = "stars">
                             <fieldset class="rating">
-                                <legend>Please rate:</legend>
-                                <input type="radio" id="star5" name="rating" value="5" /><label for="star5" title="Rocks!">5 stars</label>
-                                <input type="radio" id="star4" name="rating" value="4" /><label for="star4" title="Pretty good">4 stars</label>
-                                <input type="radio" id="star3" name="rating" value="3" /><label for="star3" title="Meh">3 stars</label>
-                                <input type="radio"  id="star2" name="rating" value="2" /><label for="star2" title="Kinda bad">2 stars</label>
-                                <input type="radio"  id="star1" name="rating" value="1" /><label for="star1" title="Sucks big time">1 star</label>
+                                <input type="radio" id="star58" name="rating" value="5" data-number = "8"/><label for="star58" title="Rocks!">5 stars</label>
+                                <input type="radio" id="star48" name="rating" value="4" data-number = "8"/><label for="star48" title="Pretty good">4 stars</label>
+                                <input type="radio" id="star38" name="rating" value="3" data-number = "8"/><label for="star38" title="Meh">3 stars</label>
+                                <input type="radio"  id="star28" name="rating" value="2" data-number = "8"/><label for="star28" title="Kinda bad">2 stars</label>
+                                <input type="radio"  id="star18" name="rating" value="1" data-number = "8"/><label for="star18" title="Sucks big time">1 star</label>
                             </fieldset>
        
                         </form>
-                      </p>
                     </div>
-                        <!-- <form action="#">
-                          <p class="range-field">
-                            <input type="range" class= "test" id="test8" data-number = "8" min="1" max="5" />
-                          </p>
-                        </form> -->
+
       
                 </div>
             </li>
 
              <li>
                 <div class="uk-card uk-card-default">
-                    <div class="uk-card-media-top">
-                        <img src="public/images/classical.jpg" alt="">
-                    </div>
-                    <div class="uk-card-body question">
-                        <h3 class="uk-card-title">Indie</h3>
-                      <p>
+                    <div class="uk-card-media-top uk-panel uk-transition-toggle" tabindex="0">
+                        <img src="public/images/Indie.jpg"  width="100%" alt="">
+                        <div class="uk-position-bottom uk-text-center uk-transition-slide-bottom p-0">  
+                            <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DX2Nc3B70tvx0" width="100%" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                        </div> 
+                    </div>               
+                    <div class="uk-card-body question d-flex flex-row justify-content-center">
                         <form class = "stars">
                             <fieldset class="rating">
-                                <legend>Please rate:</legend>
-                                <input type="radio" id="star5" name="rating" value="5" /><label for="star5" title="Rocks!">5 stars</label>
-                                <input type="radio" id="star4" name="rating" value="4" /><label for="star4" title="Pretty good">4 stars</label>
-                                <input type="radio" id="star3" name="rating" value="3" /><label for="star3" title="Meh">3 stars</label>
-                                <input type="radio"  id="star2" name="rating" value="2" /><label for="star2" title="Kinda bad">2 stars</label>
-                                <input type="radio"  id="star1" name="rating" value="1" /><label for="star1" title="Sucks big time">1 star</label>
+                                <input type="radio" id="star59" name="rating" value="5" data-number = "9"/><label for="star59" title="Rocks!">5 stars</label>
+                                <input type="radio" id="star49" name="rating" value="4" data-number = "9"/><label for="star49" title="Pretty good">4 stars</label>
+                                <input type="radio" id="star39" name="rating" value="3" data-number = "9"/><label for="star39" title="Meh">3 stars</label>
+                                <input type="radio"  id="star29" name="rating" value="2" data-number = "9"/><label for="star29" title="Kinda bad">2 stars</label>
+                                <input type="radio"  id="star19" name="rating" value="1" data-number = "9"/><label for="star19" title="Sucks big time">1 star</label>
                             </fieldset>
                         </form>
-                      </p>
                     </div>
-                        <!-- <form action="#">
-                          <p class="range-field">
-                            <input type="range" class= "test" id="test9" data-number = "9" min="1" max="5" />
-                          </p>
-                        </form> -->
-
                 </div>
             </li>
         </ul>
@@ -400,6 +357,7 @@
       </div>
     </div>
 </div>
+</div>
 
 
 
@@ -412,7 +370,6 @@
 <!-- <script type="text/javascript" src="public/materialize.min.js"></script> -->
 
 <script>
-
 
 $("#left").show();
 $("#albums").hide();
@@ -443,7 +400,6 @@ document.getElementById('submitName').onclick = function()  {
     $(document).on("click", ".stars :radio", function(event)
     {   
         var selector = ".stars :radio" + "[name=rating]:checked";
-        // var value = $('.test1 :radio[name=rating]:checked').val();
          var value = $(selector).val();
          var index = this.getAttribute("data-number");
          console.log(index);
@@ -454,8 +410,6 @@ document.getElementById('submitName').onclick = function()  {
 
   };
    
-
-
 
 
 
@@ -502,21 +456,6 @@ $("#submit").on("click", function(event) {
     }
 });
 
-
-    // $("form#ratingForm").submit(function(e) 
-    // {
-    //     e.preventDefault(); // prevent the default click action from being performed
-    //     if ($("#ratingForm :radio:checked").length == 0) {
-    //         $('#status').html("nothing checked");
-    //         return false;
-    //     } else {
-    //         $('#status').html( 'You picked ' + $('input:radio[name=rating]:checked').val() );
-    //     }
-    // });
-
-
-
- 
 
 </script>
 

@@ -18,24 +18,27 @@
 
 
 </head>
-<body class = "container-fluid p-0">
+<body class = "container-fluid p-0 uk-background-fixed uk-background-center-center">
   <div class = "container-fluid" id = "bodyContainer">
-      <div class = "row justify-content-center">
-        <div class="d-flex flex-row justify-content-around align-self-start col-3 pt-5" id = "links">      
+      <div class = "row pt-5">
+        <div class="d-flex flex-row justify-content-center col-12">    
+          <a id = "home" href="/">HOME</a> 
           <a href="/api/survey">API Survey Link</a> 
           <a href="https://github.com/chloezhouny/InCrowd">Github Repo</a> 
         </div>
       </div>
 
+      
+
 
       <div class = "row justify-content-center">
         <div class="d-flex flex-column align-items-center" id = "content" >
-            <h1>INCROWD</h1>
+            <h1>IN CROWD</h1>
 
             <h4 class = "mt-2">Meet People Who Share Your Music Interests</h4>
 
             <div id = "start">
-              <a href="/survey"><button class = "btn btn-lg btn-dark">Get Started</button></a>
+              <a href="/survey" id="startLink"><button class = "btn btn-lg btn-dark" id= "startButton">Get Started</button></a>
             </div>
         </div>
       </div>
