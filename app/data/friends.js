@@ -2,8 +2,8 @@
 var friendData = 
 [
   {
-    name: "Ahmed",
-    songLink: "https://www.youtube.com/watch?v=zqv3YesdtRU",
+    name: "Cathy",
+    songLink: "https://www.youtube.com/watch?v=6frd_dHxPRs&list=PLV78EPlNCZ5B1vHkRicCAdpbDqZ1DpLgM&index=10",
     scores: [
       5,
       1,
@@ -18,8 +18,8 @@ var friendData =
     ]
   },
   {
-    name: "Ahmed",
-    songLink: "https://www.youtube.com/watch?v=zqv3YesdtRU",
+    name: "Kloe",
+    songLink: "https://www.youtube.com/watch?v=TGXXLaO0Ke4",
     scores: [
       2,
       1,
@@ -34,8 +34,8 @@ var friendData =
     ]
   },
   {
-    name: "Match",
-    songLink: "https://www.youtube.com/watch?v=zqv3YesdtRU",
+    name: "Jasper",
+    songLink: "https://www.youtube.com/watch?v=UGK70IkP830",
     scores: [
       5,
       2,
@@ -50,8 +50,8 @@ var friendData =
     ]
   },
   {
-    name: "Ahmed",
-    songLink: "https://www.youtube.com/watch?v=zqv3YesdtRU",
+    name: "Jamie",
+    songLink: "https://www.youtube.com/watch?v=tA5A_AcBKvs",
     scores: [
       5,
       1,

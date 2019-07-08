@@ -30,49 +30,52 @@
 </head>
 <body class = "uk-background-fixed uk-background-center-center">
 <div id = "bodyContainer">
-<header class = "container-fluid pt-5">
-  <div class = "row">
-      <div id="brand">
-        <h1>InCrowd</h1>
-      </div>
+    <header class = "container-fluid pt-5">
+      <div class = "row">
+          <div id="brand">
+            <h1>InCrowd</h1>
+          </div>
 
-      <div class="col-12 d-flex flex-row justify-content-center" id = "header">
-          <a id = "home" href="/">HOME</a> 
-          <a href="/api/survey">API Survey Link</a>    
-          <a href="https://github.com/chloezhouny/InCrowd">Github Repo</a>
-          <div>
+          <div class="col-12 d-flex flex-row justify-content-center" id = "header">
+              <a id = "home" href="/">HOME</a> 
+              <a href="/api/survey">API Survey Link</a>    
+              <a href="https://github.com/chloezhouny/InCrowd">Github Repo</a>
+              <div>
 
-      </div>
+          </div>
+        </div>
+    </header>
+
+
+  <div class = "container" id = "left">
+    <div class = "container d-flex justify-content-center">
+            <form>
+                <div class="uk-margin text-center">
+                    <div class="uk-inline">
+                        <a class="uk-form-icon" href="#" uk-icon="icon: user"></a>
+                        <input class="uk-input uk-form-width-large" type="text" placeholder="Your Name" id="name">                       
+                    </div>
+                    <div id="nameValidate"></div>
+                </div>
+
+                <div class="uk-margin text-center">
+                    <div class="uk-inline">
+                        <a class="uk-form-icon uk-form-icon-flip" href="#" uk-icon="icon: link"></a>
+                        <input class="uk-input uk-form-width-large" type="text" placeholder = "Youtube Link of Your Favorite Song" id="songLink">
+                       
+                    </div>
+                     <div id="songValidate"></div>
+                </div>
+
+                <div class = "text-center" id = "submitNameSection">
+                   <p uk-margin>
+                    <a class="uk-button uk-button-default uk-width-1-2" id = "submitName">Submit</a>
+                    </p>
+                </div>
+
+          </form>
     </div>
-</header>
-
-
-<div class = "container" id = "left">
-  <div class = "container d-flex justify-content-center">
-          <form>
-              <div class="uk-margin text-center">
-                  <div class="uk-inline">
-                      <a class="uk-form-icon" href="#" uk-icon="icon: user"></a>
-                      <input class="uk-input uk-form-width-large" type="text" placeholder="Your Name" id="name">
-                  </div>
-              </div>
-
-              <div class="uk-margin text-center">
-                  <div class="uk-inline">
-                      <a class="uk-form-icon uk-form-icon-flip" href="#" uk-icon="icon: link"></a>
-                      <input class="uk-input uk-form-width-large" type="text" placeholder = "Favorite Song Link" id="songLink">
-                  </div>
-              </div>
-
-              <div class = "text-center" id = "submitNameSection">
-                 <p uk-margin>
-                  <a class="uk-button uk-button-default uk-width-1-2" id = "submitName">Submit</a>
-                  </p>
-              </div>
-
-        </form>
   </div>
-</div>
 
 
 
@@ -82,6 +85,7 @@
 <div uk-slider="center: true">
 
     <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slider="clsActivated: uk-transition-active; center: true">
+
 
         <ul class="uk-slider-items uk-child-width-1-2@s uk-grid">
             <li >
@@ -96,7 +100,7 @@
               
                     </div>
                   
-                    <div class="uk-card-body question d-flex flex-row justify-content-center">  
+                    <div class="uk-card-body question d-flex flex-row justify-content-center mt-4 pb-0 starsSection" >  
 
                         <form class = "stars">
                             <fieldset class="rating">
@@ -120,7 +124,7 @@
                             <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DWWEJlAGA9gs0" width="100%" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
                            </div>
                     </div>
-                    <div class="uk-card-body question d-flex flex-row justify-content-center">
+                    <div class="uk-card-body question d-flex flex-row justify-content-center mt-4 pb-0 starsSection">
 
                         <form class = "stars">
                             <fieldset class="rating">
@@ -140,11 +144,11 @@
                 <div class="uk-card uk-card-default">
                     <div class="uk-card-media-top uk-panel uk-transition-toggle" tabindex="0">
                         <img src="public/images/country.jpg"  width="100%" alt="">
-                        <div class="uk-position-bottom uk-text-center uk-transition-slide-bottom p-0">  
+                        <div class="uk-position-bottom uk-text-center uk-transition-slide-bottom p-0 ">  
                             <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DX1lVhptIYRda" width="100%" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
                         </div>  
                     </div>               
-                    <div class="uk-card-body question d-flex flex-row justify-content-center">
+                    <div class="uk-card-body question d-flex flex-row justify-content-center mt-4 pb-0 starsSection">
                         <form class = "stars">
                             <fieldset class="rating">
                                 <input type="radio" id="star52" name="rating" value="5" data-number = "2"/><label for="star52" title="Rocks!">5 stars</label>
@@ -165,7 +169,7 @@
                             <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DX4dyzvuaRJ0n" width="100%" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
                         </div> 
                     </div>                                  
-                    <div class="uk-card-body question d-flex flex-row justify-content-center">
+                    <div class="uk-card-body question d-flex flex-row justify-content-center mt-4 pb-0 starsSection">
                         <form class = "stars">
                             <fieldset class="rating">
                                 <input type="radio" id="star53" name="rating" value="5" data-number = "3"/><label for="star53" title="Rocks!">5 stars</label>
@@ -187,7 +191,7 @@
                             <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DXbITWG1ZJKYt" width="100%" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
                         </div>  
                     </div>               
-                    <div class="uk-card-body question d-flex flex-row justify-content-center">
+                    <div class="uk-card-body question d-flex flex-row justify-content-center mt-4 pb-0 starsSection">
                         <form class = "stars">
                             <fieldset class="rating">
   
@@ -205,13 +209,14 @@
             </li>
             <li>
                 <div class="uk-card uk-card-default">
+
                     <div class="uk-card-media-top uk-panel uk-transition-toggle" tabindex="0">
                         <img src="public/images/rap.jpg"  width="100%" alt="">
                         <div class="uk-position-bottom uk-text-center uk-transition-slide-bottom p-0">  
                             <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DX0XUsuxWHRQd" width="100%" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
                         </div>  
                     </div>               
-                    <div class="uk-card-body question d-flex flex-row justify-content-center">
+                    <div class="uk-card-body question d-flex flex-row justify-content-center mt-4 pb-0 starsSection">
                         <form class = "stars">
                             <fieldset class="rating">
                                 <input type="radio" id="star55" name="rating" value="5" data-number = "5"/><label for="star55" title="Rocks!">5 stars</label>
@@ -237,7 +242,7 @@
                             <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DXbYM3nMM0oPk" width="100%" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
                         </div>  
                     </div>               
-                    <div class="uk-card-body question d-flex flex-row justify-content-center">
+                    <div class="uk-card-body question d-flex flex-row justify-content-center mt-4 pb-0 starsSection">
                         <form class = "stars">
                             <fieldset class="rating">
                                 <input type="radio" id="star56" name="rating" value="5" data-number = "6"/><label for="star56" title="Rocks!">5 stars</label>
@@ -261,7 +266,7 @@
                             <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DX4SBhb3fqCJd" width="100%" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
                         </div>  
                     </div>               
-                    <div class="uk-card-body question d-flex flex-row justify-content-center">
+                    <div class="uk-card-body question d-flex flex-row justify-content-center mt-4 pb-0 starsSection">
                         <form class = "stars">
                             <fieldset class="rating">
                                 <input type="radio" id="star57" name="rating" value="5" data-number = "7"/><label for="star57" title="Rocks!">5 stars</label>
@@ -285,7 +290,7 @@
                             <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DWXRqgorJj26U" width="100%" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
                         </div>  
                     </div>               
-                    <div class="uk-card-body question d-flex flex-row justify-content-center">
+                    <div class="uk-card-body question d-flex flex-row justify-content-center mt-4 pb-0 starsSection">
                           <form class = "stars">
                             <fieldset class="rating">
                                 <input type="radio" id="star58" name="rating" value="5" data-number = "8"/><label for="star58" title="Rocks!">5 stars</label>
@@ -310,7 +315,7 @@
                             <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DX2Nc3B70tvx0" width="100%" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
                         </div> 
                     </div>               
-                    <div class="uk-card-body question d-flex flex-row justify-content-center">
+                    <div class="uk-card-body question d-flex flex-row justify-content-center pb-0 mt-4 starsSection">
                         <form class = "stars">
                             <fieldset class="rating">
                                 <input type="radio" id="star59" name="rating" value="5" data-number = "9"/><label for="star59" title="Rocks!">5 stars</label>
@@ -324,42 +329,49 @@
                 </div>
             </li>
         </ul>
+      
 
-        <div id = "sliders" >
 
-        <a  href="#"  uk-slider-item="previous" id = "sliderleft"><img src= "public/images/arrow-left.png"></a>
-        <a href="#"  uk-slider-item="next" id = "sliderright"><img src="public/images/arrow-right.png"></a>
-       </div>
- 
+          <div id = "sliders" >
 
+              <a href="#"  uk-slider-item="previous" id = "sliderleft"><img src= "public/images/arrow-left.png"></a>
+              <!-- class="uk-slidenav-large" uk-slidenav-previous -->
+
+              
+              <a href="#" uk-slider-item="next" id = "sliderright"><img src="public/images/arrow-right.png"></a>
+            <!--   class="uk-slidenav-large" uk-slidenav-next  -->
+
+             <!--  <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+          <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a> -->
+              
+          </div>
+        </div>
+
+        <ul class="uk-slider-nav uk-dotnav uk-flex-center uk-margin" id="dots"></ul>
+
+    
+    <div class = "row d-flex justify-content-center" id = "submitSection" >
+
+           <a href="#modal-media-youtube" id="submitLink" uk-toggle><button class = "btn btn-lg btn-dark" id= "submit">Find Friend</button></a>
     </div>
 
-    <ul class="uk-slider-nav uk-dotnav uk-flex-center uk-margin"></ul>
-    <div class = "row" id = "submitSection">
-         <p uk-margin>
-          <a class="uk-button uk-button-default" id = "submit" href="#modal-media-youtube" uk-toggle>Submit</a>
-        </p>
-    </div>
 </div>
 </div>
 
 
+</div>
 
-
-<div id="modal-media-youtube" class="uk-flex-top" uk-modal>
-    <div class="uk-modal-dialog uk-width-auto uk-margin-auto-vertical" >
-      <div class="uk-modal-header" id = "nameSection">
-      <h2 class="uk-modal-title" id = "matchedName"></h2>
+  <div id="modal-media-youtube" class="uk-flex-top" uk-modal>
+      <div class="uk-modal-dialog uk-width-auto uk-margin-auto-vertical">
+        <div class="uk-modal-header" id = "nameSection">
+            <h2 class="uk-modal-title" id = "matchedName"></h2>
+        </div>
+        <div>
+          <button class="uk-modal-close-outside" type="button" uk-close></button>
+          <iframe id = "youtubeIframe" width="740" height="409.5" frameborder="0" uk-video></iframe>
+        </div>
       </div>
-      <div>
-        <button class="uk-modal-close-outside" type="button" uk-close></button>
-        <iframe id = "youtubeIframe" width="740" height="409.5" frameborder="0" uk-video></iframe>
-      </div>
-    </div>
-</div>
-</div>
-
-
+  </div>
 
 
 
@@ -371,52 +383,92 @@
 
 <script>
 
-$("#left").show();
-$("#albums").hide();
+// $("#left").show();
+// $("#albums").hide();
+$("#submit").hide();
 
-var userAnswer = [];
+var nameTrue = false;
+var songLinkTrue = false;
+
+var userAnswer = [undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined];
+
 // var idNameArr = ['.test1 :radio', 'test1', 'test2', 'test3','test4','test5','test6','test7', 'test8','test9'];
 // var idNameArr = ['.test0 :radio', '.test1 :radio', '.test2 :radio', '.test3 :radio','.test4 :radio','.test5 :radio', '.test6 :radio','.test7 :radio', '.test8 :radio','.test9 :radio'];
+
+function validateForm() {
+  var x = $("#name").val().trim();
+  if (x == "") {
+    $("#nameValidate").text("*Required");
+  }
+  else
+  {
+    nameTrue = true;
+  }
+}
+
+function ytVidId() {
+    var url = $("#songLink").val().trim();
+    var p = /^(?:https?:\/\/)?(?:www\.)?youtube\.com\/watch\?(?=.*v=((\w|-){11}))(?:\S+)?$/;
+    var songValidate = (url.match(p)) ? RegExp.$1 : false;
+    console.log(songValidate);
+    if (songValidate === false)
+    {
+      $("#songValidate").text("*Link not valid");
+
+    }
+    else
+    {
+      document.getElementById("submitName").setAttribute("href", "#sliders");
+      songLinkTrue = true;
+    }
+
+}
+
+
+
 
 
 
 document.getElementById('submitName').onclick = function()  {
 
-  $("#left").hide();
-  $("#albums").show();
+  validateForm();  
+  ytVidId();
+  console.log("name after submit" + $("#name").val().trim());
 
-// for (var i = 0; i < idNameArr.length; i++)
-// {
-//   document.getElementById(idNameArr[i]).oninput = function()
-//   {
-//     var index = this.getAttribute("data-number");
-//     console.log(this.value);
-//     userAnswer[index] = parseInt(this.value);
-//     console.log(userAnswer);
-//   }
-// }
-
-
-    $(document).on("click", ".stars :radio", function(event)
-    {   
-        var selector = ".stars :radio" + "[name=rating]:checked";
-         var value = $(selector).val();
-         var index = this.getAttribute("data-number");
-         console.log(index);
-        console.log(value);
-        userAnswer[index] = parseInt(value); 
-        console.log(userAnswer);    
-    });
-
+  // $("#left").hide();
+  // $("#albums").show();
+  
   };
    
 
 
 
+$(document).on("click", ".stars :radio", function(event)
+{   
+    if ((nameTrue) && (songLinkTrue))
+    {
+    var selector = ".stars :radio" + "[name=rating]:checked";
+     var value = $(selector).val();
+     var index = this.getAttribute("data-number");
+     console.log(index);
+    console.log(value);
+    userAnswer[index] = parseInt(value); 
+    console.log(userAnswer); 
 
-$("#submit").on("click", function(event) {
-  if ((!userAnswer.includes(undefined)) && ($("#name").val().trim() !== undefined) && ($("#songLink").val().trim() !== undefined))
+        if (!userAnswer.includes(undefined))
+        {
+          $("#submit").show();
+        } 
+    }
+});
+
+
+
+
+$(document).on("click", "#submit", function(event) {
+  if ((!userAnswer.includes(undefined)) && (nameTrue) && (songLinkTrue))
   {
+     console.log("name after submit friend", $("#name").val().trim());
       var userInfo = 
       {
             name: $("#name").val().trim(),
@@ -428,17 +480,14 @@ $("#submit").on("click", function(event) {
     $.post("/api/survey", userInfo,
         function(data) {
 
-          // If a table is available... tell user they are booked.
           if (data) {
-            alert("Adding");
+            console.log("Adding");
           }
 
           // Clear the form when submitting
-          for (var i = 0; i < idNameArr.length; i++)
-          {
-            var name = "#" + idNameArr[i];
-            $(name).val("");
-          }
+          $("#name").val("");
+          $("#songLink").val("");
+          $(".stars :radio").val("");
           
         }).then(function(data) {
           console.log("WE GOT THIS FROM THE BACKEND", data.matchedUser);
